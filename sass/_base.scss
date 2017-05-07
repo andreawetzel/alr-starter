@@ -1,0 +1,62 @@
+//Grid Variables
+//--------------------------------------------------
+$grid-xsmall-max: 'max-width: 559px';
+$grid-small: 'min-width: 560px';
+$grid-small-max: 'max-width: 999px';
+$grid-medium: 'min-width: 1000px';
+$grid-medium-max: 'max-width: 1279px';
+$grid-large: 'min-width: 1200px';
+$grid-large-container: 1180px;
+$grid-medium-container: 980px;
+$grid-padding: 20px;
+$text-max: 700px;
+
+//Color Variables
+//--------------------------------------------------
+$color-black: #000;
+$color-dark-grey: #231F20;
+$color-medium-dark-grey: #333;
+$color-medium-grey: #666;
+$color-medium-light-grey: #999;
+$color-lightish-grey: #CCC;
+$color-light-grey: #EAEAEA;
+$color-white: #FFF;
+$white: $color-white;
+
+$color-text: $color-medium-grey;
+$color-headers: $color-medium-dark-grey;
+
+$color-primary: #CC0000;
+$color-secondary: #0099ff;
+$color-tertiary: #2cb928;
+$color-brand-light: #CCE3F8;
+
+$color-mint: #27cE9A;
+
+$color-link: $color-secondary;
+$color-link-hover: $color-primary;
+
+$transparent: rgba(255, 255, 255, 0);
+
+//Font Variables
+//--------------------------------------------------
+
+$font-body:  -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+$font-headline: $font-body;
+
+$base-font-size: 18px;
+$base-line-height: 28px;
+
+$small-font-size: 14px;
+$small-line-height: 20px;
+
+// Margin Variables
+//--------------------------------------------------
+
+$base-margin-bottom: 10px;
+$larger-margin-bottom: 30px;
+
+// Other Variables
+//--------------------------------------------------
+$drop_shadow: 0px 5px 10px rgba(0,0,0,0.2);
+$drop_shadow_more: -4px 8px 10px rgba(0,0,0,0.2);

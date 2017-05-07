@@ -1,0 +1,8 @@
+article, footer {
+  max-width: $grid-large-container;
+  margin: 0 auto;
+}
+
+article.narrow {
+  max-width: $text-max;
+}

@@ -1,0 +1,237 @@
+// Mobile Menu Toggle
+
+.site-header {
+  max-width: $grid-large-container;
+  margin: 0 auto;
+  &::after {
+    clear: both;
+    display: table;
+    content: "";
+  }
+  .site-branding {
+    float: left;
+  }
+  .mobile-nav-expand {
+    display: none;
+
+    &.js {
+      background: url("../img/menu.svg") no-repeat center center;
+      display: inline;
+      clear: both;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      background-size: 25px 40px;
+      @media($grid-small) {
+        background-size: 40px 40px;
+      }
+      @media($grid-medium) {
+        display: none;
+      }
+    }
+  }
+
+  .mobile-nav-expand a {
+    display: block;
+    text-indent: -9999px;
+    height: 55px;
+    width: 55px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  //If JavaScript is loaded, hide the mobile navigation so we can expand it with a click event from the menu button.
+
+  .js-menu-holder.is-hidden {
+    display: none;
+    @media ($grid-medium) {
+      display: block;
+    }
+  }
+
+  .js-menu-holder {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    //margin-left: 5%;
+    box-shadow: $drop_shadow;
+    @media($grid-small) {
+      top: 80px;
+    }
+    @media($grid-medium) {
+      max-width: 800px;
+      top: 0;
+      box-shadow: none;
+      display: block !important;
+      position: relative;
+    }
+  }
+  //Begin Main Nav
+
+  nav {
+    font-size: $small-font-size;
+    clear: both;
+
+
+    a {
+      color: $color-text;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    @media($grid-medium) {
+      float: right;
+      clear: none;
+
+      .menu-main-menu-container {
+        margin-top: 38px;
+      }
+    }
+
+    ul {
+      text-indent: 0;
+      margin: 0;
+      padding-left: 0;
+      background-color: $white;
+      @media($grid-medium) {
+        border-bottom: 0;
+        background-color: $transparent;
+      }
+
+      li {
+        margin: 0;
+        @media($grid-medium) {
+          display: inline-block;
+          margin: 0 10px;
+          border-bottom: 2px solid transparent;
+
+          &:active,
+          &:focus,
+          &:hover {
+            border-bottom: 2px solid $color-secondary;
+          }
+
+          li {
+            margin: 0;
+            border-bottom: 0 solid $white;
+
+            &:active,
+            &:focus,
+            &:hover {
+              border-bottom: 0 solid $white;
+            }
+          }
+        }
+
+        &.menu-item-has-children {
+          border-bottom: 0 solid $white;
+        }
+      }
+
+      > li {
+        a {
+          border-top: 1px solid $white;
+          display: block;
+          padding: 10px 20px;
+          position: relative;
+          @media($grid-medium) {
+            display: inline-block;
+            padding: 20px 10px 10px;
+            border-top: 0;
+          }
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          > a {
+            background-color: $color-secondary;
+            color: $white;
+            text-decoration: none;
+            @media($grid-medium) {
+              background-color: $white;
+              background-color: $transparent;
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+
+      .menu-item-has-children > a::after {
+        @media($grid-medium) {
+          content: " \2303";
+          display: inline-block;
+          position: absolute;
+          bottom: 12px;
+          transform: rotate(180deg) scaleX(1.1);
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .sub-menu {
+      display: none;
+      padding: 0;
+      border-top: 2px solid $color-secondary;
+      // Triangle
+      //&:before {
+      // content: "\25B2";
+      // display: block;
+      // position: absolute;
+      // top: -18px;
+      // left: 40px;
+      // font-size: 20px;
+      // color: white;
+      //}
+
+      @media($grid-medium) {
+        color: $color-text;
+        z-index: 1100;
+        box-shadow: $drop_shadow;
+        background-color: $color-white;
+        font-size: 14px;
+        min-width: 100px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+
+        .menu-item-has-children > a::after {
+          transform: rotate(90deg) scaleX(1);
+          bottom: 15px;
+        }
+      }
+
+      li {
+        margin: 0;
+        display: block;
+
+        a {
+          display: block;
+          color: $color-text;
+          background-color: $color-white;
+          @media($grid-medium) {
+            padding: 10px;
+            background-color: $white;
+          }
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          a {
+            color: $white;
+            background-color: $color-secondary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    @media($grid-medium) {
+      .menu-item-has-children:hover > .sub-menu {
+        display: block;
+      }
+    }
+  }
+}

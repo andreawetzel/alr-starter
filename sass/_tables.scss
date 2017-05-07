@@ -1,0 +1,36 @@
+table {
+  border:1px solid $color-medium-grey;
+  border-spacing:0;
+  border-collapse:collapse;
+}
+
+//Fancy Tables
+//--------------------------------------------------
+.table {
+  width:100%;
+  max-width:100%;
+  margin-bottom:20px;
+}
+.table tr:nth-child(odd) {
+  background-color: $color-light-grey;
+}
+.table-responsive {
+  min-height:.01%;
+  overflow-x:auto;
+}
+tr {
+  display:table-row;
+  vertical-align:inherit;
+  border-color:inherit;
+}
+th {
+  text-align:left;
+  font-weight:700;
+  vertical-align:bottom;
+  border-bottom:2px solid #ddd;
+  color: $color-headers;
+}
+th, td {
+  border:1px solid #ddd;
+  padding:8px;
+}

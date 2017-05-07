@@ -1,0 +1,153 @@
+// Typography  Base
+//--------------------------------------------------
+b,
+strong {
+  font-weight: 700;
+}
+cite,
+dfn,
+em,
+i {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: 0.5ex;
+}
+small {
+  font-size: 75%;
+}
+.small {
+  font-size: 75%;
+  line-height: 1.5em;
+}
+big {
+  font-size: $base-font-size * 3;
+}
+html {
+  color: $color-text;
+}
+body {
+  font-family: $font-body;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+p {
+  margin-bottom: $larger-margin-bottom;
+}
+em {
+  font-style: italic;
+}
+ul {
+  margin-bottom: $base-margin-bottom;
+}
+hr {
+  clear: both;
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+ol,
+ul {
+  margin: 0 0 1.5em 2em;
+  @media ($grid-medium) {
+    margin: 0 0 1.5em 1.5em;
+  }
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li > ol,
+li > ul {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+  @media ($grid-medium) {
+    margin-left: 1.5em;
+  }
+}
+dt {
+  font-weight: 700;
+}
+dd {
+  margin: 0 1.5em 1.5em;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: $color-headers;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a, {
+  border-bottom: 0;
+  color: $color-headers;
+  text-decoration: none;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover {
+  //header link hover styles
+  color: $color-headers;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  &:active,
+  &:focus,
+  &:hover {
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+}
+blockquote {
+  padding: 0.5em;
+  margin: 1em 0;
+  border: 0.06em solid rgba(0,0,0,.1);
+  box-shadow: inset 0 0 0.12em rgba(0,0,0,.1);
+  font-style: italic;
+  @media ($grid-medium) {
+    padding: 1.5em 1.5em 1em 1.5em;
+  }
+}
+blockquote p {
+  margin-bottom: $base-margin-bottom;
+}
+cite {
+  font-size: 0.8em;
+  font-style: italic;
+  margin-top: 0.25em;
+  display: block;
+}
