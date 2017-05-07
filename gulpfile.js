@@ -9,7 +9,6 @@ var postcss     = require('gulp-postcss');
 var autoprefix  = require('autoprefixer');
 
 
-// Watch scss AND html files, doing different things with each.
 gulp.task('serve', function () {
     // Serve files from the root of this project
     browserSync.init({
@@ -36,6 +35,7 @@ gulp.task('sassify', function(){
     }))
 });
 
+// Run 'gulp sass' to transpile Sass into CSS once. 
 gulp.task('sass', function(){
   var processors = [
     autoprefix
